@@ -6,4 +6,24 @@ module DM (
     output logic [31:0] DataRd
 );
 
+    logic[31:0] mem [63:0];
+
+    always_comb
+        if(DmWr)begin
+            case(DmCtrl)
+                3'b000: mem[address] = DataWr[7:0];
+                3'b001:mem[address] = DataWr[15:0];
+                3'b010: mem[address] = DataWr[31:0];
+            endcase
+        end
+        else begin
+            case(DmCtrl)
+                3'b000: DataRd = {24{mem[address][7]},mem[address][7:0]};
+                3'b001: DataRd = {16{mem[address][15]},mem[address][15:0]};
+                3'b010: DataRd = mem[address][31:0];
+                3'b100: DataRd = {24'b0,mem[address[7:0]]};
+                3'b101: DataRd = {16'b0,mem[address[15:0]]};
+            endcase
+        end
+
 endmodule
