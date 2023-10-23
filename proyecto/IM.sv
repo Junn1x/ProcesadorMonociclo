@@ -3,5 +3,7 @@ module IM (
     output logic [31:0] inst
 );
 
+always_comb
+    inst<=address;
 endmodule
 
