@@ -4,5 +4,8 @@ module PC (
     output logic [31:0] address
 );
 
+    always_ff @( posedge clk ) begin
+        address <= nextPcAdress; 
+    end
 
 endmodule
