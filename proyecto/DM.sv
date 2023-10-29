@@ -6,7 +6,7 @@ module DM (
     output logic [31:0] DataRd
 );
 
-    logic[31:0] mem [63:0];
+    logic[31:0] mem [1023:0];
 
     always_comb
         if(DmWr)begin
