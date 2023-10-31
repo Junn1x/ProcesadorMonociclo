@@ -1,0 +1,11 @@
+
+top.sv
+ALU.sv
+BU.sv
+CU.sv
+DM.sv
+IM.sv
+IU.sv
+PC.sv
+RU.sv
+top_tb.sv
