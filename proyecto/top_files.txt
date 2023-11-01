@@ -1,11 +1,19 @@
 
 top.sv
 ALU.sv
+<<<<<<< HEAD
+=======
+RU.sv
+>>>>>>> f373532ed7d12c0df984f122ab1e4e8a9b3f244e
 BU.sv
 CU.sv
 DM.sv
 IM.sv
 IU.sv
 PC.sv
+<<<<<<< HEAD
 RU.sv
 top_tb.sv
+=======
+top_tb.sv
+>>>>>>> f373532ed7d12c0df984f122ab1e4e8a9b3f244e

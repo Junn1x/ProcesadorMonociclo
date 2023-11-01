@@ -40,6 +40,7 @@ module top(
 
     //DM
     logic [31:0] Datard;
+<<<<<<< HEAD
     
     always_comb begin
         add = address + 4;
@@ -49,6 +50,8 @@ module top(
         nextPcAdress = add;
     end
 
+=======
+>>>>>>> f373532ed7d12c0df984f122ab1e4e8a9b3f244e
     always_comb begin
         if (AluAsrc)
             a = address;
@@ -64,12 +67,22 @@ module top(
             nextPcAdress = add;
     end
 
+<<<<<<< HEAD
     always_comb begin
         case(RuDataWrsrc)
         2'b00: RUdataWr = ALUres;
         2'b01: RUdataWr = Datard;
         2'b10: RUdataWr = add;
         endcase
+=======
+    always_comb
+    begin
+    case(RuDataWrsrc)
+    2'b00: RUdataWr = ALUres;
+    2'b01: RUdataWr = Datard;
+    2'b10: RUdataWr = add;
+    endcase
+>>>>>>> f373532ed7d12c0df984f122ab1e4e8a9b3f244e
     end
 
     alu alu1(
@@ -129,5 +142,15 @@ module top(
         .address(address)
     );
 
+<<<<<<< HEAD
   
+=======
+    always_ff @( posedge clk ) begin
+        address = nextPcAdress;
+        add = address + 4;
+    end
+    
+    
+
+>>>>>>> f373532ed7d12c0df984f122ab1e4e8a9b3f244e
 endmodule
