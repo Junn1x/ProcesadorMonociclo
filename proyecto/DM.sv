@@ -18,8 +18,8 @@ module DM (
         end
         else begin
             case(DmCtrl)
-                3'b000: DataRd = {24{mem[address][7]},mem[address][7:0]};
-                3'b001: DataRd = {16{mem[address][15]},mem[address][15:0]};
+                3'b000: DataRd = {{24{mem[address][7]}},mem[address][7:0]};
+                3'b001: DataRd = {{16{mem[address][15]}},mem[address][15:0]};
                 3'b010: DataRd = mem[address];
                 3'b100: DataRd = {24'b0,mem[address[7:0]]};
                 3'b101: DataRd = {16'b0,mem[address[15:0]]};

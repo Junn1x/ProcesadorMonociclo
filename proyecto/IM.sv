@@ -2,11 +2,11 @@ module IM (
     input logic [31:0] address,
     output logic [31:0] inst
 );
-    logic[31:0] mem [1023:0];
+    logic[31:0] mem [0:12];
 
-    always_comb begin
+    initial begin
         $readmemb ("addresses.txt",mem);
-        inst <= mem[address];
     end
+    assign inst = mem[{2'b00,address[31:2]}];
 endmodule
 

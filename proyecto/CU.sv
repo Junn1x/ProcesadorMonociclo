@@ -25,12 +25,13 @@ always_comb
             RuDataWrsrc = 2'b00;
             Immsrc = 3'bxxx;
             RuWr = 1;
-            if(func7 = 7'b0100000)begin
+            if(func7 == 7'b0100000)begin
                 case(func3)
                     3'b000: ALUOp = 4'b1000;
                     3'b101: ALUOp = 4'b1101;
                 endcase
-            else if (func7 = 7'b0000000)begin
+            end
+            if(func7 == 7'b0000000)begin
                 case(func3)
                     3'b000: ALUOp = 4'b0000;
                     3'b001: ALUOp = 4'b0001;
@@ -41,7 +42,6 @@ always_comb
                     3'b110: ALUOp = 4'b0110;
                     3'b111: ALUOp = 4'b0111;
                 endcase
-            end
             end
         end
         //Tipo i alu
@@ -68,14 +68,14 @@ always_comb
         //tipo i load
         7'b0000011:begin
             RuWr = 1;
-            RuDataWrsrc 2'b01;
+            RuDataWrsrc = 2'b01;
             Immsrc = 3'b000;
             ALUAsrc = 0;
             ALUBsrc = 1;
             ALUOp = 4'b0000;
             BUOp = 5'b00xxx;
             DmWr = 0;
-            DmCtrl <= func3;
+            DmCtrl = func3;
         end
         //jalr
         7'b1100111:begin
@@ -110,7 +110,7 @@ always_comb
             ALUBsrc = 1;
             ALUOp = 4'b0000;
             DmWr = 1;
-            DmCtrl <= func3;
+            DmCtrl = func3;
             RuDataWrsrc = 2'bxx;
         end
         //tipo b

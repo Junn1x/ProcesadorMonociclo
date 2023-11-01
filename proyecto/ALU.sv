@@ -1,8 +1,8 @@
 module alu(
-    input logic [3:0] A, 
-    input logic [3:0] B,  
+    input logic [31:0] A, 
+    input logic [31:0] B,  
     input logic [3:0] alu_op,     
-    output logic [3:0] alu_out    
+    output logic [31:0] alu_out    
 );
 
 // Lógica de la ALU
