@@ -1,4 +1,6 @@
-module PM_testbench;
+module top(
+    input logic clk
+);
     //PC
     logic [31:0] address;
     logic [31:0] add;
@@ -38,6 +40,29 @@ module PM_testbench;
 
     //DM
     logic [31:0] Datard;
+    always_comb begin
+        if (AluAsrc)
+            a = address;
+        else
+            a = Ru_rs1;
+        if (AluBsrc)
+            b = address;
+        else
+            b = Ru_rs2;
+        if (nextPcsrc)
+            nextPcAdress = ALUres;
+        else
+            nextPcAdress = add;
+    end
+
+    always_comb
+    begin
+    case(RuDataWrsrc)
+    2'b00: RUdataWr = ALUres;
+    2'b01: RUdataWr = Datard;
+    2'b10: RUdataWr = add;
+    endcase
+    end
 
     alu alu1(
     .A(a),
@@ -100,24 +125,6 @@ module PM_testbench;
         add = address + 4;
     end
     
-    always_comb begin
-        if (AluAsrc)
-            a = address;
-        else
-            a = Ru_rs1;
-        if (AluBsrc)
-            b = address;
-        else
-            b = Ru_rs2;
-        if (nextPcsrc)
-            nextPcAdress = ALUres;
-        else
-            nextPcAdress = add;
-
-        case(RuDataWrsrc)
-            2'b00: RUdataWr = ALUres;
-            2'b01: RUdataWr = Datard;
-            2'b10: RUdataWr = add;
-    end
+    
 
 endmodule
