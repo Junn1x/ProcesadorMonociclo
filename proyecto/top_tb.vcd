@@ -1,0 +1,298 @@
+$date
+	Wed Nov  1 12:28:58 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module top_tb $end
+$var reg 1 ! clk $end
+$scope module top1 $end
+$var wire 1 ! clk $end
+$var wire 1 " nextPcsrc $end
+$var wire 32 # address [31:0] $end
+$var wire 2 $ RudataWrsrc [1:0] $end
+$var wire 32 % Ru_rs2 [31:0] $end
+$var wire 32 & Ru_rs1 [31:0] $end
+$var wire 1 ' RUwr $end
+$var wire 32 ( Inst [31:0] $end
+$var wire 3 ) Immsrc [2:0] $end
+$var wire 32 * ImmExt [31:0] $end
+$var wire 3 + DMctrl [2:0] $end
+$var wire 1 , DMWr $end
+$var wire 1 - AluBsrc $end
+$var wire 1 . AluAsrc $end
+$var wire 32 / ALUres [31:0] $end
+$var wire 4 0 ALUOp [3:0] $end
+$var reg 5 1 BUOp [4:0] $end
+$var reg 32 2 Datard [31:0] $end
+$var reg 32 3 RUdataWr [31:0] $end
+$var reg 32 4 a [31:0] $end
+$var reg 32 5 add [31:0] $end
+$var reg 32 6 b [31:0] $end
+$var reg 32 7 nextPcAdress [31:0] $end
+$scope module BU1 $end
+$var wire 5 8 BUOp [4:0] $end
+$var wire 32 9 ru_RS2 [31:0] $end
+$var wire 32 : ru_RS1 [31:0] $end
+$var reg 1 " nextPcsrc $end
+$upscope $end
+$scope module CU1 $end
+$var wire 7 ; Opcode [6:0] $end
+$var wire 3 < func3 [2:0] $end
+$var wire 7 = func7 [6:0] $end
+$var reg 1 . ALUAsrc $end
+$var reg 1 - ALUBsrc $end
+$var reg 4 > ALUOp [3:0] $end
+$var reg 5 ? BUOp [4:0] $end
+$var reg 3 @ DmCtrl [2:0] $end
+$var reg 1 , DmWr $end
+$var reg 3 A Immsrc [2:0] $end
+$var reg 2 B RuDataWrsrc [1:0] $end
+$var reg 1 ' RuWr $end
+$upscope $end
+$scope module IM1 $end
+$var wire 32 C inst [31:0] $end
+$var wire 32 D address [31:0] $end
+$upscope $end
+$scope module IU1 $end
+$var wire 3 E Immsrc [2:0] $end
+$var wire 25 F inst [31:7] $end
+$var reg 32 G ImmExt [31:0] $end
+$upscope $end
+$scope module PC1 $end
+$var wire 1 ! clk $end
+$var wire 32 H nextPcAdress [31:0] $end
+$var reg 32 I address [31:0] $end
+$upscope $end
+$scope module RU1 $end
+$var wire 32 J RU_Data_Wr [31:0] $end
+$var wire 1 ' RU_Wr $end
+$var wire 5 K Rd [4:0] $end
+$var wire 1 ! clk $end
+$var wire 5 L rs1 [4:0] $end
+$var wire 5 M rs2 [4:0] $end
+$var wire 1 N rst $end
+$var wire 32 O ru_RS1 [31:0] $end
+$var wire 32 P ru_RS2 [31:0] $end
+$scope begin $ivl_for_loop0 $end
+$var integer 32 Q i [31:0] $end
+$upscope $end
+$upscope $end
+$scope module alu1 $end
+$var wire 32 R A [31:0] $end
+$var wire 32 S B [31:0] $end
+$var wire 4 T alu_op [3:0] $end
+$var reg 32 U alu_out [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 U
+b0 T
+b0 S
+b0 R
+b100000 Q
+b0 P
+b0 O
+zN
+b11000 M
+b10 L
+b10 K
+b0 J
+b0 I
+b100 H
+b11111111111111111111111111111000 G
+b1111111110000001000000010 F
+b0 E
+b0 D
+b11111111100000010000000100010011 C
+b0 B
+b0 A
+bx @
+b0xxx ?
+b0 >
+b1111111 =
+b0 <
+b10011 ;
+b0 :
+b0 9
+bx 8
+b100 7
+b0 6
+b100 5
+b0 4
+b0 3
+bx 2
+bx 1
+b0 0
+b0 /
+0.
+1-
+0,
+bx +
+b11111111111111111111111111111000 *
+b0 )
+b11111111100000010000000100010011 (
+1'
+b0 &
+b0 %
+b0 $
+b0 #
+x"
+0!
+$end
+#10000
+b0 *
+b0 G
+bx $
+bx B
+b10 +
+b10 @
+1,
+b1 )
+b1 A
+b1 E
+0'
+b10000001001000000 F
+b100011 ;
+b10 <
+b0 =
+b0 K
+b1000 M
+b100 3
+b100 J
+b100000010010000000100011 (
+b100000010010000000100011 C
+b100 /
+b100 U
+b1000 7
+b1000 H
+b1000 5
+b100 6
+b100 S
+b100 #
+b100 D
+b100 I
+1!
+#20000
+0!
+#30000
+b100 *
+b100 G
+b10010001001000100 F
+b100 K
+b1001 M
+b100100010010001000100011 (
+b100100010010001000100011 C
+b1000 /
+b1000 U
+b1100 7
+b1100 H
+b1100 5
+b1000 6
+b1000 S
+b1000 #
+b1000 D
+b1000 I
+1!
+#40000
+0!
+#50000
+b1100 3
+b1100 J
+b0 *
+b0 G
+b0 $
+b0 B
+0,
+bx +
+bx @
+b0 )
+b0 A
+b0 E
+1'
+b101000001000 F
+b10011 ;
+b0 <
+b1000 K
+b0 M
+b1010 L
+b1010000010000010011 (
+b1010000010000010011 C
+b1100 /
+b1100 U
+b10000 7
+b10000 H
+b10000 5
+b1100 6
+b1100 S
+b1100 #
+b1100 D
+b1100 I
+1!
+#60000
+0!
+#70000
+b101100001001 F
+b1001 K
+b1011 L
+b10000 3
+b10000 J
+b1011000010010010011 (
+b1011000010010010011 C
+b10000 /
+b10000 U
+b10100 7
+b10100 H
+b10100 5
+b10000 6
+b10000 S
+b10000 #
+b10000 D
+b10000 I
+1!
+#80000
+0!
+#90000
+b1100 *
+b1100 G
+b1100 ?
+bx $
+bx B
+1.
+b101 )
+b101 A
+b101 E
+0'
+b10100 4
+b10100 R
+b100010001100 F
+b1100011 ;
+b100 <
+b1100 K
+b1100 &
+b1100 :
+b1100 O
+b1000 L
+b10100 3
+b10100 J
+b1000100011001100011 (
+b1000100011001100011 C
+b101000 /
+b101000 U
+b11000 7
+b11000 H
+b11000 5
+b10100 6
+b10100 S
+b10100 #
+b10100 D
+b10100 I
+1!
+#100000
+0!

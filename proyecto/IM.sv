@@ -5,7 +5,7 @@ module IM (
     logic[31:0] mem [0:12];
 
     initial begin
-        $readmemb ("addresses.txt",mem);
+        $readmemb("addresses.txt",mem);
     end
     assign inst = mem[{2'b00,address[31:2]}];
 endmodule

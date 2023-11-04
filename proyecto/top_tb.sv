@@ -6,11 +6,7 @@ module top_tb;
   // INPUTS
   logic clk = 0;
 
-<<<<<<< HEAD
-  mp mp1(
-=======
   top top1(
->>>>>>> f373532ed7d12c0df984f122ab1e4e8a9b3f244e
     .clk(clk)
   );
 
