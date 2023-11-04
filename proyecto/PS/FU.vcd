@@ -1,0 +1,48 @@
+$date
+	Sat Nov  4 15:23:03 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module FU_tb $end
+$var wire 2 ! rs2_exSrc_tb [1:0] $end
+$var wire 2 " rs1_exSrc_tb [1:0] $end
+$var reg 1 # RUwr_me_tb $end
+$var reg 1 $ RUwr_wb_tb $end
+$var reg 5 % rd_me_tb [4:0] $end
+$var reg 5 & rd_wb_tb [4:0] $end
+$var reg 5 ' rs1_de_tb [4:0] $end
+$var reg 5 ( rs2_de_tb [4:0] $end
+$scope module FU1 $end
+$var wire 1 # RUWr_me $end
+$var wire 1 $ RUWr_wb $end
+$var wire 5 ) rd_me [4:0] $end
+$var wire 5 * rd_wb [4:0] $end
+$var wire 5 + rs1_de [4:0] $end
+$var wire 5 , rs2_de [4:0] $end
+$var reg 2 - rs1_exSrc [1:0] $end
+$var reg 2 . rs2_exSrc [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10 .
+b0 -
+b1010 ,
+b11 +
+b1010 *
+b10 )
+b1010 (
+b11 '
+b1010 &
+b10 %
+1$
+1#
+b0 "
+b10 !
+$end
+#20

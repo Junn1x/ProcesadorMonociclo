@@ -1,0 +1,48 @@
+$date
+	Sat Nov  4 17:29:11 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module HDU_tb $end
+$var wire 1 ! clr_tb $end
+$var reg 1 " DMrd_ex_tb $end
+$var reg 5 # rd_ex_tb [4:0] $end
+$var reg 5 $ rs1_de_tb [4:0] $end
+$var reg 5 % rs2_de_tb [4:0] $end
+$scope module HDU1 $end
+$var wire 1 " DMrd_ex $end
+$var wire 5 & rd_ex [4:0] $end
+$var wire 5 ' rs1_de [4:0] $end
+$var wire 5 ( rs2_de [4:0] $end
+$var reg 1 ! clr $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10 (
+b11 '
+b10 &
+b10 %
+b11 $
+b10 #
+1"
+1!
+$end
+#20
+0!
+0"
+#40
+1!
+1"
+b11 #
+b11 &
+#60
+0!
+b1100 #
+b1100 &
+#80
