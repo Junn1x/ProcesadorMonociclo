@@ -67,14 +67,6 @@ module top(
             nextPcAdress = add;
     end
 
-<<<<<<< HEAD
-    always_comb begin
-        case(RuDataWrsrc)
-        2'b00: RUdataWr = ALUres;
-        2'b01: RUdataWr = Datard;
-        2'b10: RUdataWr = add;
-        endcase
-=======
     always_comb
     begin
     case(RuDataWrsrc)
